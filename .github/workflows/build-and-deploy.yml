@@ -1,0 +1,41 @@
+name: Code Deployment to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Setup .NET
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    # Restore dependencies
+    - name: Restore dependencies
+      run: dotnet restore AdventureWorksLT2019.RazorPage/AdventureWorksLT2019.RazorPage.csproj
+
+    # Build the project
+    - name: Build the project
+      run: dotnet publish AdventureWorksLT2019.RazorPage/AdventureWorksLT2019.RazorPage.csproj --configuration Release --output ./publish
+
+    # Deploy to Azure App Service using Zip Deploy
+    - name: Deploy to Azure App Service
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: AdventureWorksLT2019RazorPage20250420103631
+        slot-name: production
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ./publish
