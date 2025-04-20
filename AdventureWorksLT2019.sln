@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT2019.HttpTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT2019.TimerTriggerFunctions", "AdventureWorksLT2019.TimerTriggerFunctions\AdventureWorksLT2019.TimerTriggerFunctions.csproj", "{E0D48D66-A78A-42A7-8AB7-EA919BAAFCF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT2019.DbContext", "AdventureWorksLT2019.DbContext\AdventureWorksLT2019.DbContext.csproj", "{C534EB94-4C73-4A04-A997-86C2E2117CCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT2019.MSSqlDbContext", "AdventureWorksLT2019.DbContext\AdventureWorksLT2019.MSSqlDbContext.csproj", "{C534EB94-4C73-4A04-A997-86C2E2117CCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksLT2019.MSSqlRepositories", "AdventureWorksLT2019.MSSqlRepositories\AdventureWorksLT2019.MSSqlRepositories.csproj", "{42634193-18F8-4B8E-A3A7-E0048D863D78}"
 EndProject
@@ -198,5 +198,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA1531F4-236E-403A-BFFE-599807C3712A}
 	EndGlobalSection
 EndGlobal

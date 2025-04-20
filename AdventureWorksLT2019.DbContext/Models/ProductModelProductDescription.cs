@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AdventureWorksLT2019.DbContext.Models;
+namespace AdventureWorksLT2019.MSSqlDbContext.Models;
 
 /// <summary>
 /// Cross-reference table mapping product descriptions and the language the description is written in.

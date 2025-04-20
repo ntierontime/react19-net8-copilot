@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AdventureWorksLT2019.DbContext.Models;
+namespace AdventureWorksLT2019.MSSqlDbContext.Models;
 
 public partial class AspNetUser
 {

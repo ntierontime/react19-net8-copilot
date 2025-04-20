@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using AdventureWorksLT2019.DbContext.Models;
+using AdventureWorksLT2019.MSSqlDbContext.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AdventureWorksLT2019.DbContext;
+namespace AdventureWorksLT2019.DbConMSSqlDbContexttext;
 
 public partial class AdventureWorksLT2019Context : DbContext
 {
