@@ -5,6 +5,10 @@ import plugin from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [plugin()],
     server: {
-        port: 59338,
+        host: true,
+        port: 3333,
+        watch: {
+            usePolling: true,
+            interval: 1000,        }
     }
 })
